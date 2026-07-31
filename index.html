@@ -1,61 +1,379 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <!-- <script src="https://jsdelivr.net"></script> -->
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TI no Oeste do Paraná</title>
+  <meta name="description" content="Guia de pesquisa sobre graduações na área de TI no Oeste do Paraná." />
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <nav>
-        <p>Home</p>
-        <p>Detalhes</p>
-        <p>Titulo</p>
-    </nav>
-    <p id="texto-post">biblioteca</p>
-
-    <form id="meu-form">
-        <div>
-            <label for="email">Digite seu email</label>
-            <input type="email" id="email" required>
+  <header class="hero">
+    <div class="container">
+      <div class="topbar">
+        <div class="brand">
+          <div class="brand-mark">TI</div>
+          <div>
+            <strong>TI Oeste PR</strong>
+            <span>Guia de graduações e pesquisa</span>
+          </div>
         </div>
-        <div>
-            <label for="message">Mande uma mensagem:</label>
-            <textarea id="message" required></textarea>
+
+        <nav class="nav-links">
+          <a href="#cursos">Cursos</a>
+          <a href="#pesquisa">Pesquisa</a>
+          <a href="#resposta">IA</a>
+        </nav>
+      </div>
+
+      <div class="hero-grid">
+        <section class="hero-copy">
+          <span class="eyebrow">Tecnologia • Educação • Região Oeste do Paraná</span>
+          <h1>Encontre graduações de TI de forma clara, bonita e organizada.</h1>
+          <p>
+            Este site foi pensado como uma fonte de pesquisa para quem quer conhecer cursos da área de tecnologia,
+            suas faculdades, modalidades e informações úteis para comparar opções.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#pesquisa">Pesquisar agora</a>
+            <a class="btn btn-secondary" href="#cursos">Ver catálogo</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>4+</strong>
+              <span>instituições</span>
+            </div>
+            <div class="stat">
+              <strong>7</strong>
+              <span>cursos em destaque</span>
+            </div>
+            <div class="stat">
+              <strong>1</strong>
+              <span>formulário de pesquisa</span>
+            </div>
+          </div>
+        </section>
+
+        <aside class="hero-panel">
+          <div class="panel-card">
+            <span class="panel-label">Objetivo do site</span>
+            <h2>Comparar opções antes de decidir</h2>
+            <p>
+              O visitante pode ler os cursos, consultar as faculdades e usar o formulário para enviar uma dúvida
+              para a IA do n8n.
+            </p>
+            <ul>
+              <li>Nome do curso</li>
+              <li>Instituição</li>
+              <li>Cidade/campus</li>
+              <li>Mensagem livre para pesquisa</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Catálogo</span>
+          <h2 id="cursos">Cursos em destaque</h2>
+          <p>Uma seleção inicial para você organizar o conteúdo do seu site.</p>
         </div>
-        <button type="submit">Send</button>
-    </form>
 
-    <!-- Elemento necessário para exibir a resposta da IA -->
-    <div id="texto-post"></div>
+        <div class="search-bar">
+          <input
+            type="search"
+            id="busca"
+            placeholder="Pesquisar curso, faculdade ou cidade..."
+            aria-label="Pesquisar curso, faculdade ou cidade"
+          />
+        </div>
 
-    <script>
-      const form = document.getElementById('meu-form');
-      const textoPost = document.getElementById('texto-post');
+        <div class="course-grid">
+          <article class="course-card" data-search="unioeste ciencia da computacao foz do iguacu integral 4 anos 3260 horas">
+            <div class="card-top">
+              <span class="tag">UNIOESTE</span>
+              <span class="tag soft">Foz do Iguaçu</span>
+            </div>
+            <h3>Ciência da Computação</h3>
+            <p>
+              Bacharelado com formação científica e tecnológica. Ótimo para quem gosta de programação,
+              algoritmos, redes, sistemas e pesquisa.
+            </p>
+            <div class="details">
+              <span>Integral</span>
+              <span>4 anos</span>
+              <span>3.260h</span>
+            </div>
+          </article>
 
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+          <article class="course-card" data-search="utfpr ciencia da computacao medianeira toledo">
+            <div class="card-top">
+              <span class="tag">UTFPR</span>
+              <span class="tag soft">Medianeira</span>
+            </div>
+            <h3>Ciência da Computação</h3>
+            <p>
+              Formação sólida para atuar com software, hardware, pesquisa e solução de problemas computacionais.
+            </p>
+            <div class="details">
+              <span>Bacharelado</span>
+              <span>Pública</span>
+              <span>Graduação</span>
+            </div>
+          </article>
 
-        textoPost.innerText = "🤖 A IA está pensando...";
+          <article class="course-card" data-search="utfpr engenharia de software oeste do parana">
+            <div class="card-top">
+              <span class="tag">UTFPR</span>
+              <span class="tag soft">Graduação</span>
+            </div>
+            <h3>Engenharia de Software</h3>
+            <p>
+              Foco em desenvolvimento, manutenção, qualidade e gestão de software.
+              É uma excelente escolha para quem quer trabalhar com produtos digitais.
+            </p>
+            <div class="details">
+              <span>Bacharelado</span>
+              <span>Software</span>
+              <span>Mercado</span>
+            </div>
+          </article>
 
-        // Faz a requisição direto para o Webhook de PRODUÇÃO do n8n
+          <article class="course-card" data-search="univel analise e desenvolvimento de sistemas cascavel ead presencial">
+            <div class="card-top">
+              <span class="tag">UNIVEL</span>
+              <span class="tag soft">Cascavel</span>
+            </div>
+            <h3>Análise e Desenvolvimento de Sistemas</h3>
+            <p>
+              Curso prático para quem quer entrar rápido na área, com foco em desenvolvimento de sistemas,
+              web e tecnologia aplicada.
+            </p>
+            <div class="details">
+              <span>Presencial</span>
+              <span>EAD</span>
+              <span>Tecnólogo</span>
+            </div>
+          </article>
+
+          <article class="course-card" data-search="univel engenharia de software cascavel">
+            <div class="card-top">
+              <span class="tag">UNIVEL</span>
+              <span class="tag soft">Cascavel</span>
+            </div>
+            <h3>Engenharia de Software</h3>
+            <p>
+              Voltado para desenvolvimento de soluções digitais com visão mais aprofundada de projeto,
+              arquitetura e qualidade.
+            </p>
+            <div class="details">
+              <span>Presencial</span>
+              <span>Bacharelado</span>
+              <span>TI</span>
+            </div>
+          </article>
+
+          <article class="course-card" data-search="fag engenharia de software cascavel toledo">
+            <div class="card-top">
+              <span class="tag">FAG</span>
+              <span class="tag soft">Cascavel / Toledo</span>
+            </div>
+            <h3>Engenharia de Software</h3>
+            <p>
+              Formação com foco em criação de software, processos, produtos digitais e visão de mercado.
+            </p>
+            <div class="details">
+              <span>Presencial</span>
+              <span>4 anos</span>
+              <span>Bacharelado</span>
+            </div>
+          </article>
+
+          <article class="course-card" data-search="fag inteligencia artificial cascavel">
+            <div class="card-top">
+              <span class="tag">FAG</span>
+              <span class="tag soft">Cascavel</span>
+            </div>
+            <h3>Inteligência Artificial</h3>
+            <p>
+              Curso pensado para a nova geração de soluções inteligentes, automação e análise de dados.
+            </p>
+            <div class="details">
+              <span>Presencial</span>
+              <span>4 anos</span>
+              <span>IA</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Pesquisa assistida</span>
+          <h2 id="pesquisa">Formulário de pesquisa</h2>
+          <p>
+            O visitante preenche a busca e recebe uma resposta da IA com mais contexto sobre o curso desejado.
+          </p>
+        </div>
+
+        <div class="form-layout">
+          <form id="meu-form" class="research-form">
+            <div class="form-grid">
+              <label>
+                Seu nome
+                <input type="text" id="nome" placeholder="Ex.: Mateus" />
+              </label>
+
+              <label>
+                E-mail
+                <input type="email" id="email" placeholder="exemplo@email.com" />
+              </label>
+
+              <label>
+                Cidade de interesse
+                <select id="cidade">
+                  <option value="">Selecione</option>
+                  <option>Cascavel</option>
+                  <option>Foz do Iguaçu</option>
+                  <option>Toledo</option>
+                  <option>Medianeira</option>
+                  <option>Francisco Beltrão</option>
+                  <option>Marechal Cândido Rondon</option>
+                </select>
+              </label>
+
+              <label>
+                Curso desejado
+                <select id="curso">
+                  <option value="">Selecione</option>
+                  <option>Ciência da Computação</option>
+                  <option>Engenharia de Software</option>
+                  <option>Análise e Desenvolvimento de Sistemas</option>
+                  <option>Inteligência Artificial</option>
+                  <option>Outro</option>
+                </select>
+              </label>
+
+              <label>
+                Tipo de instituição
+                <select id="modalidade">
+                  <option value="">Selecione</option>
+                  <option>Pública</option>
+                  <option>Privada</option>
+                  <option>EAD</option>
+                  <option>Presencial</option>
+                </select>
+              </label>
+
+              <label>
+                O que você quer descobrir?
+                <textarea
+                  id="message"
+                  rows="6"
+                  placeholder="Ex.: quais faculdades têm esse curso, duração, modalidade e o que eu preciso para começar?"
+                ></textarea>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Enviar para a IA</button>
+          </form>
+
+          <aside class="result-box" id="resposta">
+            <span class="panel-label">Resposta da IA</span>
+            <div id="texto-post" class="ai-response">
+              <p>Preencha o formulário e clique em <strong>Enviar para a IA</strong>.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Como usar</span>
+          <h2>Deixe o site com cara de portal de pesquisa</h2>
+          <p>
+            Você pode usar esse espaço para explicar ao visitante que o site reúne informações preliminares,
+            e que a confirmação final deve ser feita na página oficial de cada faculdade.
+          </p>
+        </div>
+
+        <div class="info-strip">
+          <div class="info-item">
+            <strong>1.</strong>
+            <span>O visitante escolhe cidade e curso.</span>
+          </div>
+          <div class="info-item">
+            <strong>2.</strong>
+            <span>A IA do n8n responde com mais contexto.</span>
+          </div>
+          <div class="info-item">
+            <strong>3.</strong>
+            <span>O catálogo ajuda a comparar as opções.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Guia de graduações em TI no Oeste do Paraná.</p>
+    </div>
+  </footer>
+
+  <script>
+    marked.setOptions({ breaks: true });
+
+    const form = document.getElementById('meu-form');
+    const textoPost = document.getElementById('texto-post');
+    const busca = document.getElementById('busca');
+    const cards = document.querySelectorAll('.course-card');
+
+    busca.addEventListener('input', () => {
+      const termo = busca.value.trim().toLowerCase();
+
+      cards.forEach((card) => {
+        const texto = card.dataset.search || '';
+        card.style.display = texto.includes(termo) ? 'block' : 'none';
+      });
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      textoPost.innerHTML = '<p><strong>🤖 A IA está pensando...</strong></p>';
+
+      try {
         const response = await fetch('https://sussmateus.app.n8n.cloud/webhook/a7c70034-31a6-4a81-9adb-bc4365152690', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
+            nome: document.getElementById('nome').value,
             email: document.getElementById('email').value,
+            cidade: document.getElementById('cidade').value,
+            curso: document.getElementById('curso').value,
+            modalidade: document.getElementById('modalidade').value,
             message: document.getElementById('message').value
           })
         });
 
-        // Pede para o navegador ler a resposta como texto puro
         const text = await response.text();
-
-        // Substitui o texto pela resposta da IA!
-        textoPost.innerHTML = marked.parse(text);
-      });
-    </script>
+        textoPost.innerHTML = marked.parse(text || 'Sem resposta da IA.');
+      } catch (error) {
+        textoPost.innerHTML = '<p>Não foi possível conectar ao webhook.</p>';
+      }
+    });
+  </script>
 </body>
 </html>
