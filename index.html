@@ -1,61 +1,214 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>SUA FACULDADE DO OESTE</title>
 </head>
+
 <body>
+
     <nav>
-        <p>Home</p>
-        <p>Detalhes</p>
-        <p>Titulo</p>
+        <h2>CONHEÇA AS GRADUAÇÕES DE TI NO OESTE DO PARANÁ</h2>
+
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#universidades">Universidades</a></li>
+            <li><a href="#ia">IA</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
     </nav>
-    <p id="texto-post">biblioteca</p>
 
-    <form id="meu-form">
-        <div>
-            <label for="email">Digite seu email</label>
-            <input type="email" id="email" required>
-        </div>
-        <div>
-            <label for="message">Mande uma mensagem:</label>
-            <textarea id="message" required></textarea>
-        </div>
-        <button type="submit">Send</button>
-    </form>
+    <header id="inicio">
+        <h1>Cursos de Tecnologia no Oeste do Paraná</h1>
 
-  
-    <div id="texto-post"></div>
+        <p>
+            Este site reúne algumas das principais universidades do Oeste do Paraná
+            e seus cursos na área de Tecnologia da Informação.
+        </p>
+
+        <p>
+            Além disso, você pode utilizar nossa Inteligência Artificial para tirar
+            dúvidas sobre os cursos e entrar em contato caso tenha interesse.
+        </p>
+    </header>
+
+    <section id="universidades">
+
+        <h2>Universidades e Cursos</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>UTFPR - Toledo</h3>
+                <p><strong>Curso:</strong> Engenharia de Computação</p>
+                <p><strong>Duração:</strong> 5 anos</p>
+                <p><strong>Turno:</strong> Integral</p>
+                <p><strong>Enfoque:</strong> Hardware, Software e Sistemas Embarcados.</p>
+            </div>
+
+            <div class="card">
+                <h3>UNIOESTE - Cascavel</h3>
+                <p><strong>Curso:</strong> Ciência da Computação</p>
+                <p><strong>Duração:</strong> 4 anos</p>
+                <p><strong>Turno:</strong> Integral</p>
+                <p><strong>Enfoque:</strong> Desenvolvimento de Software e Pesquisa.</p>
+            </div>
+
+            <div class="card">
+                <h3>IFPR - Foz do Iguaçu</h3>
+                <p><strong>Curso:</strong> ADS</p>
+                <p><strong>Duração:</strong> 3 anos</p>
+                <p><strong>Turno:</strong> Noturno</p>
+                <p><strong>Enfoque:</strong> Desenvolvimento Web e Mobile.</p>
+            </div>
+
+            <div class="card">
+                <h3>UNIPAR</h3>
+                <p><strong>Curso:</strong> Sistemas de Informação</p>
+                <p><strong>Duração:</strong> 4 anos</p>
+                <p><strong>Turno:</strong> Noturno</p>
+                <p><strong>Enfoque:</strong> Gestão e Desenvolvimento de Sistemas.</p>
+            </div>
+
+            <div class="card">
+                <h3>Centro Universitário FAG</h3>
+                <p><strong>Curso:</strong> Engenharia de Software</p>
+                <p><strong>Duração:</strong> 4 anos</p>
+                <p><strong>Turno:</strong> Noturno</p>
+                <p><strong>Enfoque:</strong> Engenharia de Software e Projetos.</p>
+            </div>
+
+            <div class="card">
+                <h3>PUCPR - Toledo</h3>
+                <p><strong>Curso:</strong> Tecnologia e Computação</p>
+                <p><strong>Duração:</strong> variável</p>
+                <p><strong>Turno:</strong> Diversos</p>
+                <p><strong>Enfoque:</strong> Formação tecnológica.</p>
+            </div>
+
+            <div class="card">
+                <h3>UFPR - Palotina</h3>
+                <p><strong>Curso:</strong> Computação (quando ofertado)</p>
+                <p><strong>Duração:</strong> variável</p>
+                <p><strong>Turno:</strong> Integral</p>
+                <p><strong>Enfoque:</strong> Ensino, Pesquisa e Extensão.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="ia">
+
+        <h2>🤖 Assistente IA</h2>
+
+        <p>
+            Tem dúvidas sobre algum curso? Faça sua pergunta abaixo.
+        </p>
+
+        <form id="meu-form">
+
+            <div>
+                <label>Email</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div>
+                <label>Pergunta</label>
+                <textarea id="message" required></textarea>
+            </div>
+
+            <button type="submit">Perguntar</button>
+
+        </form>
+
+        <div id="resposta-ia"></div>
+
+    </section>
+
+    <section id="contato">
+
+        <h2>Entre em contato</h2>
+
+        <p>
+            Caso haja duvidas, entre em contato
+        </p>
+
+        <!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/mykrvwej"
+  method="POST"
+>
+  <label>
+    Seu email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Sua mensagem:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+
+    </section>
+
+    <footer>
+
+        <p>
+            Desenvolvido por Mateus Rafael © 2026
+        </p>
+
+        <p>
+            HTML • CSS • n8n • Formspree
+        </p>
+
+    </footer>
 
     <script>
-      const form = document.getElementById('meu-form');
-      const textoPost = document.getElementById('texto-post');
 
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+        const form = document.getElementById('meu-form');
+        const resposta = document.getElementById('resposta-ia');
 
-        textoPost.innerText = "🤖 A IA está pensando...";
+        form.addEventListener('submit', async (e) => {
 
-       
-        const response = await fetch('https://sussmateus.app.n8n.cloud/webhook/a7c70034-31a6-4a81-9adb-bc4365152690', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
-          })
+            e.preventDefault();
+
+            resposta.innerHTML = "🤖 Pensando...";
+
+            const response = await fetch('https://sussmateus.app.n8n.cloud/webhook/a7c70034-31a6-4a81-9adb-bc4365152690', {
+
+                method: 'POST',
+
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+
+                body: JSON.stringify({
+
+                    email: document.getElementById('email').value,
+
+                    message: document.getElementById('message').value
+
+                })
+
+            });
+
+            const text = await response.text();
+
+            resposta.innerHTML = marked.parse(text);
+
         });
 
-        
-        const text = await response.text();
-
-        
-        textoPost.innerHTML = marked.parse(text);
-      });
     </script>
+
 </body>
+
 </html>

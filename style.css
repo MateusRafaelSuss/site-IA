@@ -1,14 +1,200 @@
-nav{
-    background-color: blue;
-    color: white;
-    width: 100vw;
-    position: sticky;
-    top: 0;
-    display:flex;
-    justify-content: space-evenly;
-}
-body{
-    color:black;
-    height: 150vw;
+
+
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+    color:#333;
+    line-height:1.6;
+}
+
+
+
+nav{
+    background:#0d6efd;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 40px;
+
+    position:sticky;
+    top:0;
+}
+
+nav h2{
+    font-size:24px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+
+
+header{
+    text-align:center;
+    padding:60px 20px;
+    background:white;
+}
+
+header h1{
+    font-size:40px;
+    color:#0d6efd;
+    margin-bottom:20px;
+}
+
+header p{
+    max-width:800px;
+    margin:10px auto;
+}
+
+
+
+section{
+    padding:50px 20px;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#0d6efd;
+}
+
+
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.card{
+    width:300px;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+.card h3{
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+.card p{
+    margin-bottom:8px;
+}
+
+/* Formulários */
+
+form{
+    max-width:600px;
+    margin:30px auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+label{
+    font-weight:bold;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+button{
+    background:#0d6efd;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#084298;
+}
+
+
+
+#resposta-ia{
+    max-width:700px;
+    margin:30px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+
+
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+
+
+@media (max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+        gap:10px;
+    }
+
+    header h1{
+        font-size:30px;
+    }
+
+    .card{
+        width:90%;
+    }
+
 }
